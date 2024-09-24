@@ -1,0 +1,32 @@
+
+<div class="mainDiv">
+<h3>Dodaj PDF dokument i potpiši</h3>
+
+<button class="dodaj" (click)="pdfInput.click()">Dodaj PDF</button>
+<input
+  type="file"
+  accept="application/pdf"
+  #pdfInput
+  style="display:none"
+  (change)="onFileSelected($event)"
+/>
+
+<div class="canvasDiv">
+<canvas
+  #pdfCanvas
+  (click)="captureCoordinates($event)"
+  width="800"
+  height="600"
+  style="border: 1px solid black;"
+></canvas>
+
+
+
+<div>
+  <button class="nav-btn"  (click)="goToPreviousPage()" [disabled]="currentPage <= 1">Prethodna</button>
+  <button class="nav-btn" (click)="goToNextPage()" [disabled]="!pdf || currentPage >= pdf.numPages">Sljedeca</button>
+  <button  class="clear-btn" (click)="clearCanvasPoint()" [disabled]="!pdf || currentPage >= pdf.numPages">Očisti sve</button>
+
+</div>
+
+</div>

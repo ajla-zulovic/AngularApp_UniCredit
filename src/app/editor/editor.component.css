@@ -1,0 +1,67 @@
+.username{
+padding: 8px;
+border: none;
+border-radius: 12px;
+color: #ffff;
+background-color: #15616D;
+font-weight: bold;
+margin: 10px 5px 10px 0;
+width: 80px;
+
+}
+
+.email{
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    color: #ffff;
+    background-color: #e0b473;
+    font-weight: bold;
+    margin: 10px 5px 10px 0;
+    width: 80px;
+    
+}
+
+.city{
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    color: #ffff;
+    background-color: #afd76a;
+    font-weight: bold;
+    margin: 10px 5px 10px 0;
+    width: 80px;
+
+}
+
+.preview{
+    background-color: #5D576B;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 50px;
+    float: right;
+    width: 80px;
+    
+}
+
+
+.editorClass{
+    margin: 10px 30px;
+}
+.headerButtons{
+margin-left: 30px;
+
+}
+.postDocument{
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    color: #ffff;
+    background-color: #546bee;
+    font-weight: bold;
+    margin: 10px 5px 10px 30px;
+    width: 100px;
+}

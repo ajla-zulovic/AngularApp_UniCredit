@@ -1,0 +1,21 @@
+
+
+<div class="headerButtons">
+    <button class="username" (click)="addPlaceholder('@ime')">Ime</button>
+    <button class="email" (click)="addPlaceholder('@email')">Mail</button>
+    <button class="city" (click)="addPlaceholder('@grad')">Grad</button>
+  </div>
+  
+<div class="editorClass">
+  <ckeditor 
+    [editor]="Editor" 
+    [(ngModel)]="htmlContent" 
+    [config]="editorConfig"
+    (ready)="onEditorReady($event)">
+  </ckeditor>
+</div>
+ 
+  <button class="preview" (click)="goToPreview()">Preview</button> 
+
+<button (click)="openSignPdf()" class="postDocument">Postavi i potpisi</button>
+<app-post-documentation *ngIf="showPdfSignComponent"></app-post-documentation> 

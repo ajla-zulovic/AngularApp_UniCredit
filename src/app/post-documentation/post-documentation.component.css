@@ -1,0 +1,86 @@
+.mainDiv {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: #333;
+    margin-bottom: 20px;
+    
+  }
+  
+  .pdf-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pdf-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .canvasDiv {
+    margin-top: 20px;
+  }
+  
+  canvas {
+    border: 2px solid #333;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .canvas-controls {
+    margin-top: 20px;
+  }
+  
+  .nav-btn, .clear-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-btn[disabled], .clear-btn[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .nav-btn:hover:not([disabled]), .clear-btn:hover:not([disabled]) {
+    background-color: #218838;
+  }
+  
+  .clear-btn {
+    background-color: #dc3545;
+  }
+  
+  .clear-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .dodaj{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+  font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
