@@ -9,6 +9,7 @@ import { Editor } from '@ckeditor/ckeditor5-core';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css']
 })
+
 export class EditorComponent implements OnInit {
   public Editor = ClassicEditor;
   public htmlContent: string = '';
@@ -35,23 +36,27 @@ export class EditorComponent implements OnInit {
 
   addPlaceholder(placeholder: string) {
     if (this.editorInstance) {
-      const editor = this.editorInstance;
-      editor.model.change(writer => {
-        const selection = editor.model.document.selection;
-        const position = selection.getFirstPosition();
-  
-      
-        if (position) {
-          writer.insertText(placeholder, position);
-   
-          const newPosition = position.getShiftedBy(placeholder.length);
-          writer.setSelection(newPosition);
-        } else {
-          console.warn('Nema validne pozicije za umetanje.');
-        }
-      });
+        const editor = this.editorInstance;
+        editor.model.change(writer => {
+            const selection = editor.model.document.selection;
+            const position = selection.getFirstPosition();
+
+            if (position) {
+                // Pomeri kursor na novu poziciju pre umetanja
+                const newPosition = position.getShiftedBy(placeholder.length);
+                
+                // Umetanje teksta
+                writer.insertText(placeholder, position);
+                
+                // Postavljanje kursora na novu poziciju
+                writer.setSelection(newPosition);
+            } else {
+                console.warn('Nema validne pozicije za umetanje.');
+            }
+        });
     }
-  }
+}
+
   
   user = {
     ime: 'Ajla',
