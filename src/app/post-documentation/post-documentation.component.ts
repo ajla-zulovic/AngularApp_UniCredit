@@ -112,6 +112,7 @@ export class PostDocumentationComponent {
       this.renderPage(this.currentPage);
     }
   }
+  
   clearCanvasPoint(): void {
     const canvas = this.pdfCanvas.nativeElement;
     const context = canvas.getContext('2d');
