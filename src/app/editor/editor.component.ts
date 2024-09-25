@@ -34,21 +34,24 @@ export class EditorComponent implements OnInit {
     this.editorInstance = editor;
   }
 
+  
   addPlaceholder(placeholder: string) {
     if (this.editorInstance) {
         const editor = this.editorInstance;
         editor.model.change(writer => {
             const selection = editor.model.document.selection;
-            const position = selection.getFirstPosition();
+            const range = selection.getFirstRange();
 
-            if (position) {
-                // Pomeri kursor na novu poziciju pre umetanja
-                const newPosition = position.getShiftedBy(placeholder.length);
-                
-                // Umetanje teksta
+            if (range) {
+                const position = range.end;
+
+     
                 writer.insertText(placeholder, position);
+
                 
-                // Postavljanje kursora na novu poziciju
+                const newPosition = writer.createPositionAt(position.parent, position.offset + placeholder.length);
+
+
                 writer.setSelection(newPosition);
             } else {
                 console.warn('Nema validne pozicije za umetanje.');
@@ -57,12 +60,15 @@ export class EditorComponent implements OnInit {
     }
 }
 
+
   
   user = {
     ime: 'Ajla',
     email: 'ajla@example.com',
     grad: 'Mostar'
   };
+
+  
   goToPreview() {
     if (this.editorInstance) {
       const editor = this.editorInstance;
