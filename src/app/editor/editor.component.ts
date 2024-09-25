@@ -45,20 +45,25 @@ export class EditorComponent implements OnInit {
             if (range) {
                 const position = range.end;
 
-     
+          
                 writer.insertText(placeholder, position);
 
-                
+  
                 const newPosition = writer.createPositionAt(position.parent, position.offset + placeholder.length);
 
-
+                
                 writer.setSelection(newPosition);
+
+                writer.insertText(' ', newPosition);
+                
+                editor.editing.view.focus(); 
             } else {
                 console.warn('Nema validne pozicije za umetanje.');
             }
         });
     }
 }
+
 
 
   
