@@ -8,6 +8,8 @@ import { PreviewComponent } from './preview/preview.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { PostDocumentationComponent } from './post-documentation/post-documentation.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes:Routes=[
    { path: '', component: EditorComponent },
@@ -28,6 +30,7 @@ const routes:Routes=[
     FormsModule,
     RouterModule.forRoot(routes),
     CKEditorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

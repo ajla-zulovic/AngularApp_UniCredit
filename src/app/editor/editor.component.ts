@@ -18,8 +18,7 @@ export class EditorComponent implements OnInit {
   public editorConfig = {
     toolbar: [
       'bold', 'italic', 'link', 'undo', 'redo', 'insertTable', 'heading',
-      'bulletedList', 'numberedList', 'blockQuote', 'alignment', 'highlight',
-      'fontColor', 'fontSize', 'mediaEmbed', 'imageUpload'
+      'bulletedList', 'numberedList', 'blockQuote', 'fontSize', 'mediaEmbed', 'imageUpload'
     ],
     table: {
       contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells']
